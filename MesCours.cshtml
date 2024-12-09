@@ -1,0 +1,24 @@
+@model IEnumerable<Cours>
+
+<h2>Mes Cours</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Module</th>
+            <th>Date</th>
+            <th>Heure Début</th>
+            <th>Heure Fin</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cours in Model)
+        {
+            <tr>
+                <td>@cours.Module</td>
+                <td>@cours.Date.ToShortDateString()</td>
+                <td>@cours.HeureDebut</td>
+                <td>@cours.HeureFin</td>
+            </tr>
+        }
+    </tbody>
+</table>
